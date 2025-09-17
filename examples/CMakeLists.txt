@@ -6,7 +6,6 @@ find_package(Qt6 6.5 REQUIRED COMPONENTS Core Widgets)
 qt_standard_project_setup()
 
 qt_add_executable(example
-    WIN32 MACOSX_BUNDLE
     main.cpp
     mainwindow.cpp
     mainwindow.h
@@ -16,6 +15,12 @@ target_link_libraries(example
     PRIVATE
         Qt::Core
         Qt::Widgets
+        qtstylekit
+)
+
+target_include_directories(example
+    PRIVATE
+        ${CMAKE_SOURCE_DIR}/qtstylekit/include/
 )
 
 include(GNUInstallDirs)

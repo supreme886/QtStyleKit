@@ -12,6 +12,5 @@ set(CMAKE_AUTOUIC ON)
 find_package(Qt6 REQUIRED COMPONENTS Core Widgets Gui)  # 或 Qt5
 
 # 添加子目录
-# add_subdirectory(src)
 add_subdirectory(examples)
-add_subdirectory(src)
+add_subdirectory(qtstylekit)
